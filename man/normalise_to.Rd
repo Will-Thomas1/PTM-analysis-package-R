@@ -17,5 +17,6 @@ normalise_to(df, reference_col, comparison_cols)
 The original df with new columns with normalised abundance values.
 }
 \description{
-Creates new columns that are normalised to a specified column with abundance values.
+If comparison_cols parameter is left blank all columns that contain 'abundance' in the title will be normalised.
+New column names will be the original column name + '/' + reference column name.
 }
