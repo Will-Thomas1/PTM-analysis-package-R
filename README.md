@@ -1,4 +1,4 @@
-# PTM-analysis-package-R
+# PTM Histone Analysis Made Easy (PHAME)
 
 ## Installation
 
