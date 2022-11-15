@@ -1,6 +1,6 @@
 # PTM Histone Analysis Made Easy (PHAME)
 
-## Installation
+## Installation and Tips
 
 To install the package you must have the package ‘devtools’. If you don’t have this package you can install it by running the code:
 
@@ -16,9 +16,11 @@ Then, to load all functions into the global environment run:
 
 Instead of referring back to this README file in the future, by running ?[function] you can get a reminder of what the function does and how to define all of its parameters in the help tab. For example ?normalise_to gives:
 
-![image](https://user-images.githubusercontent.com/107320556/201528945-2f84b56f-5492-4b16-b22c-c445e0448284.png)
+![image](https://user-images.githubusercontent.com/107320556/202028510-c250e9c0-3e7f-4158-aa13-5b2ebd6ababb.png)
 
 The PTM_info_df dataframe which is loaded into the global environment upon running library("PHAME") contains all the shorthand and longhand abbreviations for PTMs. To edit this go to the data-raw file and edit the abbrevs_and_longhand_PTM_names file. 
+
+To quickly get a list of all the functions in PHAME enter "**PHAME::**" (without quotation marks) into the console 
  
 ## Description of functions
 
@@ -31,11 +33,11 @@ The PTM_info_df dataframe which is loaded into the global environment upon runni
 
 •	If add_Nterm_mods parameter is TRUE then N-terminal modifications will be added as well. 
 
-![image](https://user-images.githubusercontent.com/107320556/201529294-981cc51f-38de-40df-9b76-f1e08a43dfd3.png)
-![image](https://user-images.githubusercontent.com/107320556/201529298-1b0a477e-2c1d-4736-a4d6-de4c73d58228.png)
+![image](https://user-images.githubusercontent.com/107320556/202029057-d8073fb4-31fc-4103-bc09-00c1fea88c1c.png)
+![image](https://user-images.githubusercontent.com/107320556/202028789-d361212a-7826-4a1b-8536-a649f057700f.png)
 
 
-### add_rel_abundance_col
+### add_relative_abundance
 
 •	Create new columns with relative abundances by dividing the abundance for one row by the sum of the total abundace.
 
@@ -43,7 +45,7 @@ The PTM_info_df dataframe which is loaded into the global environment upon runni
 
 •	New columns generated will have the same name as the ones they're derived from except they'll have '_relative' appended at the end.
  
-![image](https://user-images.githubusercontent.com/107320556/201529343-165623f9-9690-49d7-a135-958007df9f75.png)
+![image](https://user-images.githubusercontent.com/107320556/202029376-f377d9c4-b108-4f3f-9359-050a96d819f1.png)
  
 ### average_freq_of_PTM_per_seq
 
@@ -86,8 +88,8 @@ The PTM_info_df dataframe which is loaded into the global environment upon runni
 ### possible_arrangements_of_PTMs
 
 •	For a given sequence and set of PTMs, find all the combinations in which the PTMs could appear on the sequence. 
- 
-![image](https://user-images.githubusercontent.com/107320556/201529400-9faedba6-e877-444c-8942-20513b8121a1.png)
+
+![image](https://user-images.githubusercontent.com/107320556/202028347-c931ade7-ae0c-40d6-8a02-24d950cd1698.png)
 
  
 ### prop_of_rows_with_PTM
@@ -105,7 +107,7 @@ The PTM_info_df dataframe which is loaded into the global environment upon runni
 
 •	Due to methionine cleavage subtract_1 is an option to change the start and end values to those more commonly found in the literature (e.g. K28ac to K27ac).
  
-![image](https://user-images.githubusercontent.com/107320556/201529470-18831c3c-3f42-4b6c-8b53-ddd74f64f5ac.png)
+![image](https://user-images.githubusercontent.com/107320556/202029628-b5f71f9e-6d4d-4782-8df9-e9b9ab410440.png)
 
  
 ### PTM_abundance_at_given_position_by_abundance
