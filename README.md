@@ -108,13 +108,6 @@ To quickly get a list of all the functions in PHAME enter "**PHAME::**" (without
 •	Due to methionine cleavage subtract_1 is an option to change the start and end values to those more commonly found in the literature (e.g. K28ac to K27ac).
  
 ![image](https://user-images.githubusercontent.com/107320556/202029628-b5f71f9e-6d4d-4782-8df9-e9b9ab410440.png)
-
- 
-### PTM_abundance_at_given_position_by_abundance
-
-•	If you give a specific position you’re interested in AND a PTM you’ll get the percent of sequences/ residues at that position which have that PTM you specified. 
-
-•	For example, if you specify “K10bu”, you’ll get a percentage of what lysines at that position are butyrylated. 
  
 
 
