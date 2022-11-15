@@ -56,7 +56,7 @@ The PTM_info_df dataframe which is loaded into the global environment upon runni
 
 
  
-### prop_of_seqs_containing_PTM()
+### prop_of_seqs_containing_PTM
 
 •	This function first groups together all sequences that contain a specified PTM or even a residue. It will then give the ratio, by abundance, of sequences containing the PTM divided by the total abundance. 
 
@@ -108,7 +108,7 @@ The PTM_info_df dataframe which is loaded into the global environment upon runni
 ![image](https://user-images.githubusercontent.com/107320556/201529470-18831c3c-3f42-4b6c-8b53-ddd74f64f5ac.png)
 
  
-### PTM_abundance_at_given_position_by_abundance()
+### PTM_abundance_at_given_position_by_abundance
 
 •	If you give a specific position you’re interested in AND a PTM you’ll get the percent of sequences/ residues at that position which have that PTM you specified. 
 
