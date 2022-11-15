@@ -155,8 +155,7 @@ add_unmod_qualifier <- function(df_with_modified_seqs, colname_with_modified_seq
   sequence_mod_vector <- df_with_modified_seqs[[colname_with_modified_seqs]]
 
   output <- df_with_modified_seqs %>%
-    dplyr::mutate(!! colname_with_modified_seqs := furrr::future_map2(sequence_mod_vector, residues, add_unmod_qualifier_1seq) %>%
-                     unlist())
+    dplyr::mutate(!! colname_with_modified_seqs := add_unmod_qualifier_1seq(sequence_mod_vector, residues))
 
   return(output)
 

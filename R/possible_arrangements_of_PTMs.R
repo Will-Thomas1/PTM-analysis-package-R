@@ -72,6 +72,9 @@ possible_arrangements_of_PTMs <- function(seq_without_mods, PTMs) {
     final_output <- c(final_output, add_mods_to_seq(i, seq_without_mods))
   }
 
+  final_output <- final_output %>%
+    unique() #Gets rid of duplicate sequences
+
   return(final_output)
 
 }

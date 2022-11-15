@@ -7,7 +7,7 @@
 delete_rows_with_same_elements_in_cols(
   df,
   vector_of_colnames,
-  ignore_rows_where_all_abundances_NA = T
+  ignore_rows_where_all_abundances_NA = F
 )
 }
 \arguments{
@@ -15,7 +15,7 @@ delete_rows_with_same_elements_in_cols(
 
 \item{vector_of_colnames}{Column names the user wishes to group rows by. If there is more than one row per group, these rows will be removed.}
 
-\item{ignore_rows_where_all_abundances_NA}{Option to ignore any rows that have all 'NA' values in column names with 'abundance' in them.}
+\item{ignore_rows_where_all_abundances_NA}{Option to ignore any rows that have all 'NA' values in column names with 'abundance' in them. Defaults to FALSE.}
 }
 \value{
 The inputted \code{df} with rows removed as dictated by \code{vector_of_colnames}.

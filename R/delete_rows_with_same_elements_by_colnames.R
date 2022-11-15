@@ -8,22 +8,18 @@
 #'
 #' @param df Any dataframe with column names.
 #' @param vector_of_colnames Column names the user wishes to group rows by. If there is more than one row per group, these rows will be removed.
-#' @param ignore_rows_where_all_abundances_NA Option to ignore any rows that have all 'NA' values in column names with 'abundance' in them.
+#' @param ignore_rows_where_all_abundances_NA Option to ignore any rows that have all 'NA' values in column names with 'abundance' in them. Defaults to FALSE.
 #' @return The inputted \code{df} with rows removed as dictated by \code{vector_of_colnames}.
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 #' @importFrom utils data
 #' @export
 
-delete_rows_with_same_elements_in_cols <- function(df, vector_of_colnames, ignore_rows_where_all_abundances_NA = T) {
+delete_rows_with_same_elements_in_cols <- function(df, vector_of_colnames, ignore_rows_where_all_abundances_NA = F) {
 
   . <- NULL
 
  if (ignore_rows_where_all_abundances_NA == T) {
-
-   one_of_cols_contains_abundance_boolean <- stringr::str_detect(paste(vector_of_colnames, collapse = " "), "abundance") #Does abundance appear in one of the colnames specified?
-
-   if (one_of_cols_contains_abundance_boolean == T) {
 
      modded_df <- df %>%
        dplyr::mutate(contains_all_NA_vals = is.na(dplyr::select(., dplyr::contains("abundance"))) %>%
@@ -38,9 +34,7 @@ delete_rows_with_same_elements_in_cols <- function(df, vector_of_colnames, ignor
        dplyr::filter(.data$number_of_rows_per_group == 1 | .data$contains_all_NA_vals == TRUE)  %>%
        dplyr::select(-.data$number_of_rows_per_group, -.data$contains_all_NA_vals)
 
-   }
-
- } else {
+  } else {
 
    modded_df <- df %>%
      dplyr::group_by(dplyr::across(dplyr::all_of(vector_of_colnames))) %>%
