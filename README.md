@@ -80,7 +80,7 @@ The PTM_info_df dataframe which is loaded into the global environment upon runni
 
 •	If comparison_cols parameter is not defined all columns with abundance in them will be chosen. 
  
-![image](https://user-images.githubusercontent.com/107320556/201529393-3042d832-7f72-4494-a0ec-575e276d3915.png)
+![image](https://user-images.githubusercontent.com/107320556/202028112-914a4eba-ba6c-4ae9-9efe-6d245b87e467.png) 
  
  
 ### possible_arrangements_of_PTMs
